@@ -9,6 +9,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SingleCategoryComponent } from './pages/single-category/single-category.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
+import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SinglePostComponent } from './pages/single-post/single-post.component';
     FooterComponent,
     HomeComponent,
     SingleCategoryComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     BrowserModule,
