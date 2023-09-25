@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubsciptionFormComponent } from './subsciption-form.component';
+import { SubsciptionFormComponent } from './subscription-form.component';
 
 describe('SubsciptionFormComponent', () => {
   let component: SubsciptionFormComponent;
