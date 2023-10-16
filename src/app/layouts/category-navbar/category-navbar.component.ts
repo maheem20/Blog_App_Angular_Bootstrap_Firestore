@@ -8,11 +8,14 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoryNavbarComponent implements OnInit {
 
+  categoryArray: Array<object> | undefined;
+
   constructor(private categoryService: CategoriesService) { }
 
   ngOnInit(): void {
 
     this.categoryService.loadData().subscribe(val => {
+      this.categoryArray = val;
     });
   }
 
