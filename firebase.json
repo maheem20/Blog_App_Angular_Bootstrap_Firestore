@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Blog_App_Angular_Bootstrap_Firestore",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -91,6 +91,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "Blog_App_Angular_Bootstrap_Firestore:build:production"
+          }
         }
       }
     }
