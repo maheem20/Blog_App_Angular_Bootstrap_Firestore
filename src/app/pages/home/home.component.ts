@@ -8,10 +8,12 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class HomeComponent implements OnInit {
 
+  featuredPostsArray: Array<object> | undefined;
+
   constructor(private postsService: PostsService) {
 
     this.postsService.loadFeatured().subscribe(val => {
-      console.log(val);
+      this.featuredPostsArray = val;
     });
 
   }
