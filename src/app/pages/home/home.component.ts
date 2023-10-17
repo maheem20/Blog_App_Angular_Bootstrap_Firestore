@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private postsService: PostsService) {
 
-    this.postsService.loadData().subscribe(val => {
+    this.postsService.loadFeatured().subscribe(val => {
       console.log(val);
     });
 
