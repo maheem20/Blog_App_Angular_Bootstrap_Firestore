@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
       this.featuredPostsArray = val;
     });
 
+    this.postsService.loadLatest().subscribe(val => { });
   }
 
 }
