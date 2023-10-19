@@ -9,6 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 export class HomeComponent implements OnInit {
 
   featuredPostsArray: Array<object> | undefined;
+  latestPostsArray: Array<object> | undefined;
 
   constructor(private postsService: PostsService) { }
 
@@ -18,7 +19,9 @@ export class HomeComponent implements OnInit {
       this.featuredPostsArray = val;
     });
 
-    this.postsService.loadLatest().subscribe(val => { });
+    this.postsService.loadLatest().subscribe(val => {
+      this.latestPostsArray = val;
+    });
   }
 
 }
