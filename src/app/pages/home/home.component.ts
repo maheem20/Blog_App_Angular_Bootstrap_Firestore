@@ -10,15 +10,14 @@ export class HomeComponent implements OnInit {
 
   featuredPostsArray: Array<object> | undefined;
 
-  constructor(private postsService: PostsService) {
+  constructor(private postsService: PostsService) { }
+
+  ngOnInit(): void {
 
     this.postsService.loadFeatured().subscribe(val => {
       this.featuredPostsArray = val;
     });
 
-  }
-
-  ngOnInit(): void {
   }
 
 }
