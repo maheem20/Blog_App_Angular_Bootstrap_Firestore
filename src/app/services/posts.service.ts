@@ -33,4 +33,6 @@ export class PostsService {
     );
   }
 
+  loadCategoryPosts(categoryId: string) { }
+
 }
