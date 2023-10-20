@@ -33,6 +33,8 @@ export class PostsService {
     );
   }
 
-  loadCategoryPosts(categoryId: string) { }
+  loadCategoryPosts(categoryId: string) {
+    return this.afs.collection('posts', ref => ref.where('categoryId', '==', categoryId).limit(4))
+  }
 
 }
