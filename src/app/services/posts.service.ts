@@ -35,6 +35,16 @@ export class PostsService {
 
   loadCategoryPosts(categoryId: string) {
     return this.afs.collection('posts', ref => ref.where('categoryId', '==', categoryId).limit(4))
+    .snapshotChanges().pipe(
+      map(
+        actions => {
+        return actions.map(a => {
+          const data: any = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
   }
 
 }
