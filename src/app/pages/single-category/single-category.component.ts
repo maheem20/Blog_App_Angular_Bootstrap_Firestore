@@ -11,6 +11,11 @@ export class SingleCategoryComponent implements OnInit {
   constructor(private	route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.route.params.subscribe(val => {
+      console.log(val);
+    });
+
   }
   
 }
