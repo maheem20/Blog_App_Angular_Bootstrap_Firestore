@@ -10,18 +10,21 @@ import { PostsService } from 'src/app/services/posts.service';
 export class SingleCategoryComponent implements OnInit {
 
   postsArray: Array<object> | undefined;
+  categoryObject: any;
 
-  constructor(private	route: ActivatedRoute, private postService: PostsService) { }
+  constructor(private route: ActivatedRoute, private postService: PostsService) { }
 
   ngOnInit(): void {
 
     this.route.params.subscribe(val => {
       console.log(val);
+      this.categoryObject = val;
+
       this.postService.loadCategoryPosts(val.id).subscribe(post => {
         this.postsArray = post;
       });
     });
 
   }
-  
+
 }
