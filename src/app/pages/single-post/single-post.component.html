@@ -10,7 +10,7 @@
                     <small class="bg-light text-danger text-center ml-2">LAST UPDATED - {{ postData.createdAt.toMillis() | date }}</small>
 
                     <h1 class="mt-3 mb-3">{{postData.title}}</h1>
-                    <p>{{ postData.content }}</p>
+                    <p [innerHTML]="postData.conent"></p>
                 </div>
             </div>
 
