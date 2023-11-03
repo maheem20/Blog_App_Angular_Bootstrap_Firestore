@@ -9,13 +9,15 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class SinglePostComponent implements OnInit {
 
+  postData: any;
+
   constructor(private route: ActivatedRoute, private postService: PostsService) { }
 
   ngOnInit(): void {
 
     this.route.params.subscribe(val => {
       this.postService.loadOnePost(val.id).subscribe(post => {
-        console.log(post);
+        this.postData = post;
       });
     });
   }
