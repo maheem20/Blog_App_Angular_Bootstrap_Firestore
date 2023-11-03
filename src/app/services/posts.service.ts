@@ -47,4 +47,8 @@ export class PostsService {
     );
   }
 
+  loadOnePost(postId: any) {
+    return this.afs.doc(`posts/${postId}`).valueChanges();
+  }
+
 }
