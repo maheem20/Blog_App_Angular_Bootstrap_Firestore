@@ -10,6 +10,7 @@ import { PostsService } from 'src/app/services/posts.service';
 export class SinglePostComponent implements OnInit {
 
   postData: any;
+  similarPostArray: Array<object> = [];
 
   constructor(private route: ActivatedRoute, private postService: PostsService) { }
 
@@ -24,6 +25,8 @@ export class SinglePostComponent implements OnInit {
   }
 
   loadSimilarPost(categoryId: any) {
-    this.postService.loadSimilar(categoryId);
+    this.postService.loadSimilar(categoryId).subscribe(val => {
+      this.similarPostArray = val;
+    })
   }
 }
