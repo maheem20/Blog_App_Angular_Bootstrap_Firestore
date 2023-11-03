@@ -21,4 +21,8 @@ export class SinglePostComponent implements OnInit {
       });
     });
   }
+
+  loadSimilarPost(categoryId: any) {
+    this.postService.loadSimilar(categoryId);
+  }
 }
