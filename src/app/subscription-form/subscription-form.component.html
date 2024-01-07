@@ -13,6 +13,7 @@
                         #Name = 'ngModel'
                         ngModel
                         required
+                        [ngClass]="{'is-invalid': Name.invalid && Name.touched}"
                         >
                     </div>
                     <div class="form-group col-md-5">
