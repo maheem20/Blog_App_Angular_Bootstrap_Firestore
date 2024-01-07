@@ -7,18 +7,25 @@
                     <div class="form-group col-md-5">
                         <input
                         type="text"
-                        class="form-control
-                        shadow-effect"
+                        class="form-control shadow-effect"
                         placeholder="Your Name"
-                        ngModel>
+                        name="name"
+                        #Name = 'ngModel'
+                        ngModel
+                        required
+                        >
                     </div>
                     <div class="form-group col-md-5">
                         <input
                         type="email"
-                        class="form-control
-                        shadow-effect"
+                        class="form-control shadow-effect"
                         placeholder="Email Address"
-                        ngModel>
+                        name="email"
+                        #Email = 'ngModel'
+                        ngModel
+                        required
+                        email
+                        >
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-info btn-block btn-theme">SUBSCRIBE</button>
