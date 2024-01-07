@@ -29,6 +29,7 @@
                         ngModel
                         required
                         email
+                        [ngClass]="{'is-invalid': Email.invalid && Email.touched}"
                         >
                         <div class="text-danger" *ngIf="Email.touched && Email.invalid">
                             <div *ngIf="Email.errors?.['required']">Email is Required</div>
