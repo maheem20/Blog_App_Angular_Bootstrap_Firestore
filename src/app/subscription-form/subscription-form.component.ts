@@ -19,7 +19,10 @@ export class SubscriptionFormComponent implements OnInit {
       name: formVal.name,
       email: formVal.email
     };
-    this.subService.addSubs(subData);
+    
+    this.subService.checkSubs(subData.email).subscribe(val => {
+      console.log(val);
+    });
   }
 
 }
