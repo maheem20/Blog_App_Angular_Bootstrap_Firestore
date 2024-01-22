@@ -4,7 +4,7 @@
             <h3>SUBSCRIPTION FORM</h3>
             <p class="m-auto subs-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, elit sapien bibendum elit, vel bibendum elit sapien eget elit. Sed euismod, velit vel bibendum bibendum, elit sapien bibendum elit, vel bibendum elit sapien eget elit.</p>
 
-                <div class="alert alert-danger mt-3">
+                <div class="alert alert-danger mt-3" *ngIf="isEmailError">
                     Email is already in use
                 </div>
 
