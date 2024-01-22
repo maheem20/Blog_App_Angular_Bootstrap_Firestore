@@ -7,6 +7,9 @@
                 <div class="alert alert-danger mt-3" *ngIf="isEmailError">
                     Email is already in use
                 </div>
+                <div class="alert alert-danger mt-3" *ngIf="isSubscribed">
+                    Thank you for subscribing to our newsletter service. Stay tuned for more updates.
+                </div>
 
                 <form class="form-inline mb-5 mt-5" #subForm = ngForm (ngSubmit)="onSubmit(subForm.value)">
                     <div class="form-group col-md-5">
