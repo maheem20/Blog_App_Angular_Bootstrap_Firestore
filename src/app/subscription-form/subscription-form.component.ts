@@ -10,6 +10,7 @@ import { SubscribersService } from '../services/subscribers.service';
 export class SubscriptionFormComponent implements OnInit {
 
   isEmailError: boolean = false;
+  isSubscribed: boolean = false;
 
   constructor(private subService: SubscribersService) { }
 
@@ -27,6 +28,7 @@ export class SubscriptionFormComponent implements OnInit {
 
       if (val.empty) {
         this.subService.addSubs(subData);
+        this.isSubscribed = true;
       } else {
         this.isEmailError = true;
       }
