@@ -11,7 +11,7 @@
                     Thank you for subscribing to our newsletter service. Stay tuned for more updates.
                 </div>
 
-                <form class="form-inline mb-5 mt-5" #subForm = ngForm (ngSubmit)="onSubmit(subForm.value)">
+                <form class="form-inline mb-5 mt-5" #subForm = ngForm (ngSubmit)="onSubmit(subForm.value)" *ngIf="!isSubscribed">
                     <div class="form-group col-md-5">
                         <input
                         type="text"
